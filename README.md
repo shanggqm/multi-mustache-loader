@@ -19,7 +19,7 @@ the multi template file should only write as below:
 ### Install
 
 ```sh
-$ npm i -S multi-mustache-loader
+$ npm i multi-mustache-loader
 ```
 
 ### Usage
@@ -36,8 +36,9 @@ module: {
 }
 ```
 
-1. one file one template
+### one file one template
 template.html
+
 ```html
 <ul>
 {{#user}}
@@ -50,8 +51,9 @@ var template = require('./template.html');
 var html = template({ foo: 'bar' });
 ```
 
-2. one file more than one template
+### one file more than one template
 multi-template.html
+
 ```html
 <script type="template/text" id="tmp-name">
 	<span>{{name}}</span>
