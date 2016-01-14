@@ -1,5 +1,13 @@
 ## Multi Mustache loader for [webpack](https://webpack.github.io/)
 
+[![NPM version](https://img.shields.io/npm/v/multi-mustache-loader.svg)](https://www.npmjs.com/package/multi-mustache-loader)
+[![NPM downloads total](https://img.shields.io/npm/dt/multi-mustache-loader.svg)](https://www.npmjs.com/package/multi-mustache-loader)
+[![NPM license](https://img.shields.io/npm/l/multi-mustache-loader.svg)](https://www.npmjs.com/package/multi-mustache-loader)
+[![Build Status](https://travis-ci.org/shanggqm/multi-mustache-loader.svg?branch=master)](https://travis-ci.org/shanggqm/multi-mustache-loader)
+[![bitHound Overalll Score](https://www.bithound.io/github/shanggqm/multi-mustache-loader/badges/score.svg)](https://www.bithound.io/github/shanggqm/multi-mustache-loader)
+[![Dependency Status](https://david-dm.org/shanggqm/multi-mustache-loader.svg)](https://david-dm.org/shanggqm/multi-mustache-loader)
+[![devDependency Status](https://david-dm.org/shanggqm/multi-mustache-loader/dev-status.svg)](https://david-dm.org/shanggqm/multi-mustache-loader#info=devDependencies)
+
 Compiles [Mustache](https://mustache.github.io/) templates with [Hogan](https://twitter.github.io/hogan.js/) and optionally [html-minifier](https://github.com/kangax/html-minifier). Support both single template file and multi template file.
 
 the multi template file should only write as below:

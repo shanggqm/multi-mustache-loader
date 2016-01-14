@@ -29,8 +29,8 @@
     "loader-utils": "^0.2.4"
   },
   "devDependencies": {
-    "eslint": "^0.8.1",
-    "jscs": "^1.6.2"
+    "eslint": "^1.10.3",
+    "jscs": "^2.8.0"
   },
   "scripts": {
     "test": "eslint index.js && jscs index.js"
