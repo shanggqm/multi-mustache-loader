@@ -1,6 +1,6 @@
 {
   "name": "@bizfe/multi-mustache-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "multiple mustache loader for webpack. Allow multiple template write in on template file",
   "keywords": [
     "webpack",
