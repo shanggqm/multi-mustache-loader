@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "hogan.js": "^3.0.2",
-    "html-minifier": "^0.6.8",
+    "html-minifier": "^1.1.1",
     "loader-utils": "^0.2.4"
   },
   "devDependencies": {
