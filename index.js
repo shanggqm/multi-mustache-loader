@@ -60,10 +60,10 @@ module.exports = function(source) {
     });
 
     var splitRegExp = /<script.+?id="(.+?)".*?>([\s\S]+?)<\/script>/g;
+    var matched = [];
+    var match;
     // if tpl file is multiple template or wrap with script tag?
     if (multiSource.match(splitRegExp)) {
-        var matched = [],
-            match;
         while ((match = splitRegExp.exec(multiSource)) !== null) {
             if (match.length >= 3) {
                 matched.push({
@@ -86,16 +86,14 @@ module.exports = function(source) {
 
         return 'var H = require("hogan.js");\n' +
             'module.exports = {' + multiExports.join(',') + '}';
-    } else {
-        return 'var H = require("hogan.js");\n' +
-            'module.exports = function() { ' +
-            'var T = new H.Template(' +
-            Hogan.compile(source, {
-            asString: true
-        }) +
-            ', ' +
-            JSON.stringify(source) +
-            ', H);' + suffix;
     }
-
+    return 'var H = require("hogan.js");\n' +
+        'module.exports = function() { ' +
+        'var T = new H.Template(' +
+        Hogan.compile(source, {
+        asString: true
+    }) +
+        ', ' +
+        JSON.stringify(source) +
+        ', H);' + suffix;
 };
