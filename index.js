@@ -52,19 +52,12 @@ module.exports = function(source) {
         suffix = 'return T.render.apply(T, arguments); }';
     }
 
-    var multiSource = minifier.minify(originalSource, {
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseInlineTagWhitespace: true,
-        removeRedundantAttributes: true
-    });
-
-    var splitRegExp = /<script.+?id="(.+?)".*?>([\s\S]+?)<\/script>/g;
+    var splitRegExp = /<script.+?id\s*?=\s*?"(.+?)".*?>([\s\S]+?)<\/script>/g;
     var matched = [];
     var match;
     // if tpl file is multiple template or wrap with script tag?
-    if (multiSource.match(splitRegExp)) {
-        while ((match = splitRegExp.exec(multiSource)) !== null) {
+    if (source.match(splitRegExp)) {
+        while ((match = splitRegExp.exec(source)) !== null) {
             if (match.length >= 3) {
                 matched.push({
                     id: match[1],
